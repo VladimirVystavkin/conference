@@ -7,12 +7,15 @@ import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {SharedModule} from "./shared/shared.module";
+import {ConferenceInformationPageComponent} from "./conference-information-page/conference-information-page.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     MainLayoutComponent,
-    HomePageComponent
+    HomePageComponent,
+    ConferenceInformationPageComponent,
+
   ],
   imports: [
     BrowserModule,

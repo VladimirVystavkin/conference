@@ -1,17 +1,14 @@
 <mat-toolbar class="toolbar">
-
   <button mat-icon-button color="primary" (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
   <span>Conferences</span>
   <button mat-icon-button color="primary"><mat-icon>add</mat-icon></button>
 </mat-toolbar>
 
-<mat-drawer-container class="main-container" autosize>
+<mat-drawer-container class="main-container" style="padding-bottom: 64px" autosize>
 
   <mat-drawer #drawer class="main-sidenav" mode="side">
-
     <mat-nav-list class="nav-list">
       <h2>MENU</h2>
-
       <nav>
           <ul >
             <li>
