@@ -1,0 +1,33 @@
+<mat-toolbar class="toolbar">
+
+  <button mat-icon-button color="primary" (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
+  <span>Conferences</span>
+  <button mat-icon-button color="primary"><mat-icon>add</mat-icon></button>
+</mat-toolbar>
+
+<mat-drawer-container class="main-container" autosize>
+
+  <mat-drawer #drawer class="main-sidenav" mode="side">
+
+    <mat-nav-list class="nav-list">
+      <h2>MENU</h2>
+
+      <nav>
+          <ul >
+            <li>
+              <a><mat-icon color="primary">home</mat-icon><span>Conferences</span></a>
+
+            </li>
+            <li>
+              <a><mat-icon color="primary" >add</mat-icon><span>Create Conference</span></a>
+            </li>
+          </ul>
+      </nav>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <div class="main-sidenav-content">
+    <router-outlet></router-outlet>
+  </div>
+
+</mat-drawer-container>
