@@ -1,6 +1,20 @@
 
 <h2 class="title_panel" >Conferences</h2>
-<mat-list>
-  <mat-list-item><span>Dolorem doloribus ducimus et ipsum itaque laborum maiores porro quod temporibus veritatis! Adipisci alias at beatae blanditiis deleniti dignissimos fuga iusto laudantium non, officiis omnis qui rerum, saepe sed, tempore!</span><button mat-icon-button color="primary"><mat-icon>edit</mat-icon></button><button mat-icon-button color="primary"><mat-icon>delete</mat-icon></button></mat-list-item>
-  <mat-divider></mat-divider>
-</mat-list>
+<div *ngFor="let conference of conferences.getConferences()">
+  <mat-list>
+    <mat-list-item class="list_item" [routerLink]="['/','conference','information' , conference.id]"><p><span class="title_panel">Title :</span> {{conference.title}} <span class="title_panel">Date:</span> {{conference.date | date : "medium"}}</p>
+
+      <div>
+        <button mat-icon-button color="primary" [routerLink]="['/','conference','update','form',conference.id]">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="primary" (click)="deleteConference(conference)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+</div>
+

@@ -11,11 +11,11 @@
       <h2>MENU</h2>
       <nav>
           <ul >
-            <li>
-              <a><mat-icon color="primary">home</mat-icon><span>Conferences</span></a>
+            <li [routerLink]="['/']">
+              <a ><mat-icon color="primary">home</mat-icon><span>Conferences</span></a>
 
             </li>
-            <li>
+            <li [routerLink]="['/','conference','update','form', null]" >
               <a><mat-icon color="primary" >add</mat-icon><span>Create Conference</span></a>
             </li>
           </ul>

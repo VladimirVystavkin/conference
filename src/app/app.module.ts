@@ -8,6 +8,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {SharedModule} from "./shared/shared.module";
 import {ConferenceInformationPageComponent} from "./conference-information-page/conference-information-page.component";
+import { ConferenceUpdateFormPageComponent } from './conference-update-form-page/conference-update-form-page.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {ConferenceInformationPageComponent} from "./conference-information-page/
     MainLayoutComponent,
     HomePageComponent,
     ConferenceInformationPageComponent,
+    ConferenceUpdateFormPageComponent,
 
   ],
   imports: [

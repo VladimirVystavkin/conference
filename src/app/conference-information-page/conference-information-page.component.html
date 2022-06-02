@@ -1,19 +1,18 @@
 
-<h2 class="title_panel">{{conference.title}}</h2>
+<h2 class="title_panel">{{conference?.title}}</h2>
 <dl>
   <dt>Date</dt>
-  <dd>{{conference.date}}</dd>
+  <dd>{{conference?.date | date : "shortDate"}}</dd>
   <dd></dd>
   <dt>Address</dt>
-  <dd><address>{{conference.address}}</address></dd>
+  <dd><address>{{conference?.address}}</address></dd>
+  <dt>Country</dt>
+  <dd>{{conference?.country}}</dd>
 </dl>
 
 <div class="full" id="map"></div>
-<p>
-  <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci assumenda debitis expedita facere hic id laudantium maxime molestias mollitia necessitatibus nobis perferendis porro quisquam ratione recusandae, ullam voluptas voluptatibus.</span><span>Consequatur eveniet facere mollitia praesentium sunt suscipit tempore vitae voluptas. Accusamus ad cum cupiditate ducimus ea illo illum nihil optio provident reiciendis? Eveniet recusandae unde vero! Ad autem deserunt hic?</span><span>Accusamus, amet assumenda autem culpa est expedita ipsum laborum molestiae molestias odit perspiciatis porro ullam vitae. Amet at, beatae culpa deleniti, dicta dignissimos dolorum molestias, nam non odit optio praesentium?</span><span>Dolor, repellat, suscipit? Asperiores assumenda atque cupiditate dolores earum fugit id illum ipsum maiores mollitia nulla odit, porro quam quis quisquam soluta veniam veritatis voluptas voluptate voluptatem! Eius, inventore, tempora!</span><span>Ab fugiat, illo maxime quasi quidem quisquam unde. Accusamus alias aperiam blanditiis consequatur debitis dignissimos doloremque dolorum ea explicabo fuga, id in laudantium numquam quisquam, quos rem repellat, sit tempora!</span><span>Aperiam autem culpa eaque et eveniet expedita id ipsum iste itaque magnam nesciunt nisi non nulla odio odit officiis omnis pariatur provident, quas qui quis rem reprehenderit tempora tenetur voluptatem!</span><span>Assumenda beatae commodi consequuntur debitis dicta dolore doloremque dolores ea, enim eum ex exercitationem fuga fugit ipsa maxime molestiae optio quibusdam reiciendis sint sunt tempora tenetur totam vel veniam voluptate!</span><span>A ab aliquam consectetur consequuntur, dolor ducimus earum enim incidunt iusto laboriosam laudantium magnam non officia quam sed sunt temporibus, tenetur ullam vero, voluptatibus? Architecto deserunt dolorem eligendi laudantium praesentium?</span><span>Aperiam atque consequuntur dolores exercitationem harum id illo, itaque minus nam nihil nostrum perspiciatis porro quas repellendus saepe. Aperiam consequuntur eveniet nam neque nihil possimus praesentium quam suscipit ullam voluptatibus?</span><span>Eveniet fuga laborum libero magni non quibusdam ratione, sed temporibus tenetur vero? Alias beatae dicta dolorem ea impedit magnam nam nobis quasi quibusdam tempora. Doloribus inventore minus nulla omnis voluptates.</span>
-</p>
 <button mat-icon-button class="button-information"><mat-icon>edit</mat-icon></button>
-<button mat-icon-button class="button-information"><mat-icon>delete</mat-icon></button>
+<button mat-icon-button class="button-information" (click)="deleteConference(conference)"><mat-icon>delete</mat-icon></button>
 
 
 
