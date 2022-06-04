@@ -51,12 +51,13 @@ export class ConferenceInformationPageComponent implements OnInit {
       )
     })
   }
-
+  editConference(conference : Conference | undefined){
+    this.router.navigate(['/','conference','update','form',conference ? conference.id : null])
+  }
   deleteConference(conference : Conference | undefined){
     if(conference){
       this.conferencesStorageService.deleteConferences(conference)
     }
-
     this.router.navigate(['/'])
   }
 

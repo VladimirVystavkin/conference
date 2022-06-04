@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ConferencesStorageService} from "../core/conference/conferences-storage.service";
 import {Conference} from "../core/conference/conference.interface";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-home-page',
@@ -9,11 +10,12 @@ import {Conference} from "../core/conference/conference.interface";
 })
 export class HomePageComponent implements OnInit {
 
-  constructor( public conferences : ConferencesStorageService ) {}
+  constructor( public conferences : ConferencesStorageService , public router : Router) {}
 
   ngOnInit(): void {
 
   }
+
   deleteConference(conference : Conference){
     this.conferences.deleteConferences(conference)
   }

@@ -9,6 +9,7 @@ import {AppRoutingModule} from "./app-routing.module";
 import {SharedModule} from "./shared/shared.module";
 import {ConferenceInformationPageComponent} from "./conference-information-page/conference-information-page.component";
 import { ConferenceUpdateFormPageComponent } from './conference-update-form-page/conference-update-form-page.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -19,12 +20,13 @@ import { ConferenceUpdateFormPageComponent } from './conference-update-form-page
     ConferenceUpdateFormPageComponent,
 
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    SharedModule,
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        SharedModule,
+        ReactiveFormsModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -75,7 +75,8 @@ export class Conference implements IConference {
 
 
   get id(): string {
-    return "";
+
+    return this._id ? this._id : "";
   }
 
   get address(): string {
